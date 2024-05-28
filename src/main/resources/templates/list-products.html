@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Insert title here</title>
+</head>
+
+<body>
+
+	<h1> Products List :-</h1>
+
+
+	<table>
+		<tr>
+			<th>Product Id</th>
+			<th>Product Name</th>
+			<th>Product Price</th>
+			<th>Product Date</th>
+		</tr>
+
+		<tr th:each="data :${products}">
+			<td><span th:text="${data.productId}"> </span></td>
+			<td><span th:text="${data.productName}"> </span></td>
+			<td><span th:text="${data.price}"> </span></td>
+			<td><span th:text="${data.productDate}"> </span></td>
+		</tr>
+
+	</table>
+
+</body>
+
+</html>
